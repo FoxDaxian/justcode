@@ -1,11 +1,11 @@
 {
     "name": "justcode",
-    "repository": "",
+    "repository": "https://github.com/FoxDaxian/justcode",
     "author": "FoxDaxian",
     "bin": {
         "jcd": "./index.js"
     },
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "./index.js",
     "license": "MIT",
     "description": "cli",
