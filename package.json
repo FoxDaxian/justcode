@@ -1,0 +1,25 @@
+{
+    "name": "justcode",
+    "repository": "",
+    "author": "FoxDaxian",
+    "bin": {
+        "jcd": "./index.js"
+    },
+    "version": "1.0.0",
+    "main": "./index.js",
+    "license": "MIT",
+    "description": "cli",
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "commander": "^2.19.0",
+        "debug": "^4.1.0",
+        "inquirer": "^6.2.0",
+        "progress": "^2.0.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "nodemon": "^1.18.4"
+    },
+    "scripts": {}
+}
