@@ -16,7 +16,8 @@ cmd.command('init <tempName>')
     .description('生成webpack模板，tempName为生成后的目录名')
     .action((tempName, cmd) => {
         const templatePath = path.resolve(__dirname, './template');
-        canMkdir(tempName);
+        const curPath = process.cwd();
+        canMkdir(`${curPath}/${tempName}`);
         const files = getFiles(templatePath, tempName);
         const len = files.length;
         const bar = new ProgressBar(
@@ -31,8 +32,12 @@ cmd.command('init <tempName>')
         );
         for (let i = 0; i < len; i++) {
             // 目标目录路径
-            const targetPath = files[i].replace('template', tempName);
+            const targetPath = files[i].replace(
+                `${__dirname}/template`,
+                `${curPath}/${tempName}`
+            );
             const content = fs.readFileSync(files[i], { encoding: 'utf8' });
+
             fs.writeFileSync(targetPath, content);
             bar.tick();
         }
@@ -44,11 +49,15 @@ cmd.command('init <tempName>')
 
 function getFiles(pathValue, tempName) {
     const res = [];
+    const curPath = process.cwd();
     const files = fs.readdirSync(pathValue);
     for (let i = 0, len = files.length; i < len; i++) {
         const fileName = files[i];
         const filePath = `${pathValue}/${fileName}`;
-        const targetPath = filePath.replace('template', tempName);
+        const targetPath = filePath.replace(
+            `${__dirname}/template`,
+            `${curPath}/${tempName}`
+        );
         const isDir = fs.lstatSync(filePath).isDirectory();
         if (isDir) {
             canMkdir(targetPath);
