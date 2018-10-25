@@ -2,7 +2,7 @@
  * @Author: fox 
  * @Date: 2018-10-25 14:10:07 
  * @Last Modified by: fox
- * @Last Modified time: 2018-10-25 14:27:07
+ * @Last Modified time: 2018-10-25 19:20:05
  */
 import webpack from 'webpack';
 import config from 'config';
@@ -60,7 +60,6 @@ const prodConf = merge(defaultConf, {
     ]
 });
 
-console.log(prodConf);
 const compiler = webpack(prodConf);
 
 rm(path.resolve(__dirname, '../dist'), err => {
