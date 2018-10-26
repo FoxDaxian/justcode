@@ -1,7 +1,7 @@
 {
     "name": "plugin_name",
     "version": "1.0.0",
-    "main": "./dist/static/output.js",
+    "main": "./dist/output.js",
     "repository": "your git repository",
     "author": "your name",
     "license": "MIT",
