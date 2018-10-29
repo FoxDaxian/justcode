@@ -32,10 +32,7 @@ cmd.command('init <tempName>')
         );
         for (let i = 0; i < len; i++) {
             // 目标目录路径
-            const targetPath = files[i].replace(
-                `${__dirname}/template`,
-                `${curPath}/${tempName}`
-            );
+            const targetPath = getTargetPath(files[i], tempName);
             const content = fs.readFileSync(files[i], { encoding: 'utf8' });
 
             fs.writeFileSync(targetPath, content);
@@ -49,15 +46,11 @@ cmd.command('init <tempName>')
 
 function getFiles(pathValue, tempName) {
     const res = [];
-    const curPath = process.cwd();
     const files = fs.readdirSync(pathValue);
     for (let i = 0, len = files.length; i < len; i++) {
         const fileName = files[i];
-        const filePath = `${pathValue}/${fileName}`;
-        const targetPath = filePath.replace(
-            `${__dirname}/template`,
-            `${curPath}/${tempName}`
-        );
+        const filePath = path.resolve(pathValue, fileName);
+        const targetPath = getTargetPath(filePath, tempName);
         const isDir = fs.lstatSync(filePath).isDirectory();
         if (isDir) {
             canMkdir(targetPath);
@@ -68,6 +61,14 @@ function getFiles(pathValue, tempName) {
         }
     }
     return res;
+}
+
+function getTargetPath(filePath, tempName) {
+    const curPath = process.cwd();
+    return filePath.replace(
+        path.resolve(__dirname, 'template'),
+        path.resolve(curPath, tempName)
+    );
 }
 
 function canMkdir(path) {
