@@ -1,6 +1,6 @@
 ### A scaffold that generates template tools for writing NPM packages. compatible with window & mac & linux.
 
-[中文](https://github.com/FoxDaxian/justcode/blob/master/README.md, '中文地址') | [english](https://github.com/FoxDaxian/justcode/blob/master/en-us.md, 'en-us')
+[中文](https://github.com/FoxDaxian/justcode/blob/master/README.md '中文地址') | [english](https://github.com/FoxDaxian/justcode/blob/master/en-us.md 'en-us')
 
 #### template basic function
 1. support es6

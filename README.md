@@ -1,6 +1,6 @@
 ### 一个生成用于写npm包的模板工具的脚手架 兼容window | mac | linux
 
-[中文](https://github.com/FoxDaxian/justcode/blob/master/README.md, '中文地址') | [english](https://github.com/FoxDaxian/justcode/blob/master/en-us.md, 'en-us')
+[中文](https://github.com/FoxDaxian/justcode/blob/master/README.md '中文地址') | [english](https://github.com/FoxDaxian/justcode/blob/master/en-us.md 'en-us')
 
 #### 模板功能
 1. 支持es6
@@ -19,6 +19,7 @@
 	cd /yourtarget dir
 	// 生成模板
 	jcd init <customName>
+	// 进入
 	cd customName
 	// 安装依赖
 	npm i
