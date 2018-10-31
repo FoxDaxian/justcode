@@ -1,5 +1,8 @@
-### window | mac | linux 生成一个可以用来写框架的模板的脚手架工具
+### 一个生成用于写npm包的模板工具的脚手架 兼容window | mac | linux
 
+[中文](https://github.com/FoxDaxian/justcode/blob/master/README.md, '中文地址') | [english](https://github.com/FoxDaxian/justcode/blob/master/en-us.md, 'en-us')
+
+#### 模板功能
 1. 支持es6
 1. 支持scss
 1. 热刷新(除index.html)
@@ -13,7 +16,7 @@
 	//  全局安装
 	npm i justcode -g
 	// 切换到你的目标目录
-	cd /yourcustom dir
+	cd /yourtarget dir
 	// 生成模板
 	jcd init <customName>
 	cd customName
