@@ -14,7 +14,7 @@
     "bin": {
         "jcd": "./index.js"
     },
-    "version": "1.0.9",
+    "version": "1.0.10",
     "main": "./index.js",
     "license": "MIT",
     "description": "a scaffold that generates template tools for writing NPM packages;(一个生成用于写npm包的模板工具的脚手架)",
