@@ -1,6 +1,15 @@
 {
     "name": "justcode",
     "repository": "https://github.com/FoxDaxian/justcode",
+    "keywords": [
+        "npm packages template",
+        "npm packages",
+        "npm template",
+        "auto generates",
+        "cli",
+        "automation",
+        "webpack"
+    ],
     "author": "FoxDaxian",
     "bin": {
         "jcd": "./index.js"
